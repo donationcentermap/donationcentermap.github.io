@@ -579,7 +579,7 @@ map.on("click", function (evt) {
       document.getElementById("feature_street").innerHTML =
         feat.getProperties().Street;
       document.getElementById("feature_Zip").innerHTML =
-        feat.getProperties().Zip;
+        feat.getProperties().Zipcode;
       document.getElementById("feature_City").innerHTML =
         feat.getProperties().City;
       document.getElementById("feature_pay_attention").innerHTML =
