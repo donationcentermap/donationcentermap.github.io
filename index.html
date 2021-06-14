@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="/assets/lib/fontawesome/css/font-awesome.min.css">
     <!-- Custom style  -->
     <link rel="stylesheet" href="/assets/custom/css/style.css">
-    <title>Donation-center</title>
+    <title>Donation center Map</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -65,7 +65,8 @@
     <div class="modal-content">
       <div class="modal-header" style="border-bottom: 0px !important;">
         <img src="/assets/custom/images/marker.jpg" width="30" alt="">
-        <h5 class="modal-title" id="newEntryLabel">  Adding New Location</h5>
+        <h5 class="modal-title" id="newEntryLabel"> Hinzufügen eines neuen Standorts</h5>
+        <!-- <h5 class="modal-title" id="newEntryLabel">  Adding New Location</h5> -->
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button> 
@@ -73,12 +74,14 @@
       </div>
       <div class="modal-body">
          <div class="form-group">
-    <label for="place_name">Name of organisation* </label>
+    <label for="place_name">Organisationsname</label> 
+<!-- Name of organisation   -->
     <input type="text" class="form-control" id="place_name" aria-describedby="TextHelp" placeholder="Enter Name">
   </div>
   <div class="form-group">
-    <label for="location_text">Location</label>
-  
+    
+    <label for="location_text">Ort</label>
+  <!-- Location -->
 <div id="map1" class="map1"></div>
     <small id="mapHelp" class="form-text text-muted">Search Interested Location and move marker if needed</small>
 
@@ -86,7 +89,8 @@
 <div class="row">
     <div class="col-md-6 col-sm-12">
 <div class="form-group">
-    <label for="telehpone">Telephone</label>
+    <label for="telehpone">Telefon</label>
+    <!-- Telephone -->
     <div class="input-group">
   <select class="custom-select" id="country_code" aria-label="Example select with button addon">
      <option data-countryCode="US" value="1" selected>USA (+1)</option>
@@ -308,7 +312,8 @@
     <input type="text" class="form-control" id="telehpone" aria-describedby="emailHelp" placeholder="0123456789">
   </div>
 </div>
-        <small id="numberHelp" class="form-text text-muted">Phone number is mandatory</small>
+        <small id="numberHelp" class="form-text text-muted">Telefonnummer ist Pflicht </small>
+        <!-- Phone number is mandatory -->
     <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="help@donation.com">
     <input type="text" class="form-control" id="website" aria-describedby="emailHelp" placeholder="foodhub.de">
 
@@ -316,10 +321,11 @@
     </div>
      <div class="col-md-6 col-sm-12">
         <div class="form-group">
-    <label for="telehpone">Address</label>
-       <input type="text" class="form-control" id="street" aria-describedby="emailHelp" placeholder="Street Name">
-    <input type="text" class="form-control" id="zip" aria-describedby="emailHelp" placeholder="Zip Code">
-    <input type="text" class="form-control" id="city" aria-describedby="emailHelp" placeholder="City">
+    <label for="telehpone">Adresse</label>
+    <!-- Address -->
+       <input type="text" class="form-control" id="street" aria-describedby="emailHelp" placeholder="Straßenname">
+    <input type="text" class="form-control" id="zip" aria-describedby="emailHelp" placeholder="Postleitzahl">
+    <input type="text" class="form-control" id="city" aria-describedby="emailHelp" placeholder="Stadt">
 
 </div>
     </div>
@@ -327,13 +333,15 @@
 <div class="row">
     <div class="col-md-6 col-sm-12">
  <div class="form-group">
-    <label for="pay_attention">Note</label>
+    <label for="pay_attention"> Hinweis</label>
+    <!-- Note -->
     <textarea class="form-control" id="pay_attention" rows="3"></textarea>
   </div>
     </div>
      <div class="col-md-6 col-sm-12">
         <div class="form-group">
-    <label for="do_with_donation">What Happens with the donations</label>
+    <label for="do_with_donation">Was passiert mit den Spenden </label>
+    <!-- What Happens with the donations -->
     <textarea class="form-control" id="do_with_donation" rows="3"></textarea>
   </div>
     </div>
@@ -344,13 +352,15 @@
 
     <div class="col-md-6 col-sm-12">
          <div class="form-group">
-    <label for="place_time">Opening hours</label>
+    <label for="place_time"> Öffnungszeiten</label>
+    <!-- Opening hours -->
     <textarea class="form-control" id="place_time" rows="3"></textarea>
   </div>
     </div>
      <div class="col-md-6 col-sm-12">
          <div class="form-group">
-    <label for="place_field_activity">Our field of activity</label>
+    <label for="place_field_activity">Unser Tätigkeitsfeld</label>
+    <!-- Our field of activity -->
     <textarea class="form-control" id="place_field_activity" rows="3"></textarea>
   </div>
     </div>
@@ -360,7 +370,8 @@
   
       <div class="col-md-6 col-sm-12">
          <div class="form-group">
-    <label for="place_need">Need</label>
+    <label for="place_need">Brauchen </label>
+    <!-- Need -->
     <textarea class="form-control" id="place_need" rows="2"></textarea>
   </div>
     </div>
@@ -369,10 +380,10 @@
           <div class="btn-group-vertical btn-group-toggle" style="margin-top: 10px;" >
       <div class="btn-group btn-group-toggle" data-toggle="buttons">
   <label class="btn btn-outline-success active">
-    <input type="checkbox" class="category" checked value="Food" autocomplete="off"> Food
+    <input type="checkbox" class="category" checked value="Food" autocomplete="off"> Essen
   </label>
   <label class="btn btn-outline-success">
-    <input type="checkbox" class="category"  value='Clothes'> Clothes
+    <input type="checkbox" class="category"  value='Clothes'> Kleider
   </label>
   <!-- <label class="btn btn-outline-success">
     <input type="checkbox" class="category" value='Books'> Books
@@ -396,7 +407,8 @@
     <input type="checkbox" class="category" value='Furniture'> Furniture
   </label>
       </div> -->
-          <small id="typeHelp" class="form-text text-muted">Select At least one category</small>
+          <!-- <small id="typeHelp" class="form-text text-muted">Select At least one category</small> -->
+          <small id="typeHelp" class="form-text text-muted">Wählen Sie mindestens eine Kategorie aus</small>
 </div>
 
   </div>
@@ -407,8 +419,10 @@
 </div>
 
     <div class="modal-footer" style="border-top: 0px !important;">
-               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success" onclick="submitform()">Add Place</button>
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">Schließen</button>
+               <!-- Close -->
+        <button type="button" class="btn btn-success" onclick="submitform()"> Ort hinzufügen</button>
+        <!-- Add Place -->
 
           </div>
       </div>
@@ -438,12 +452,15 @@
       <td style="text-align: left;" id='feature_name'></td>
     </tr>
      <tr>
-      <td>Categories</td>
+      <!-- <td>Categories</td> -->
+      <td>Kategorien</td>
       <td  style="text-align: left;" ><div class="btn-group" role="group" aria-label="Basic example" id='available_type'>
 </div>  </td>
     </tr>
     <tr>     
-         <td>Telephone</td>
+         <!-- <td>Telephone</td> -->
+         <td>Telefon</td>      
+
       <td  style="text-align: left;"  id='feature_telehpone'></td>
     </tr>
     <tr>
@@ -451,35 +468,43 @@
       <td  style="text-align: left;"  id='feature_email'></td>
     </tr>
     <tr>
-      <td>Website</td>
+      <!-- <td>Website</td> -->
+      <td>Webseite</td>
       <td  style="text-align: left;"  id='feature_website'></td>
     </tr>
       <tr>     
-         <td>Street</td>
+         <!-- <td>Street</td> -->
+         <td>Straße</td>
       <td  style="text-align: left;"  id='feature_street'></td>
     </tr>
     <tr>
-      <td>Zip</td>
+      <!-- <td>Zip</td> -->
+      <td>Postleitzahl</td>
       <td  style="text-align: left;"  id='feature_Zip'></td>
     </tr>
     <tr>
-      <td>City</td>
+      <!-- <td>City</td> -->
+      <td>Stadt</td>
       <td  style="text-align: left;"  id='feature_City'></td>
     </tr>
     <tr>     
-        <td>Note</td>
+        <!-- <td>Note</td> -->
+        <td>Hinweis</td>
       <td  style="text-align: left;"  id='feature_pay_attention'></td>
     </tr>
      <tr>
-      <td>What Happens with the donations</td>
+      <!-- <td>What Happens with the donations</td> -->
+      <td>Was passiert mit den Spenden</td>
       <td  style="text-align: left;"  id='feature_do_with_donation'></td>
     </tr>
      <tr>
-      <td>Opening hours</td>
+      <!-- <td>Opening hours</td> -->
+      <td>Öffnungszeiten</td>
       <td  style="text-align: left;"  id='feature_time'></td>
     </tr>
      <tr>
-      <td>Need</td>
+      <!-- <td>Need</td> -->
+      <td>Brauchen</td>
       <td  style="text-align: left;"  id='feature_need'></td>
     </tr>
   
