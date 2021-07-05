@@ -22,4 +22,60 @@
         top: 118px;
       }
 
-  
+#loader{
+  position: fixed;
+  background: #333;
+  color: #4b9cdb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+#loader.show{
+  opacity: 1;
+  visibility: visible;
+}
+.ring-2 {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  margin: 0 auto;
+  border: 4px solid #4b9cdb;
+  border-radius: 100%;
+}
+.ball-holder {
+  position: absolute;
+  width: 12px;
+  height: 36px;
+  left: 13px;
+  top: 0;
+}
+.ball {
+  position: absolute;
+  top: -16px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background: #4282b3;
+}
+.load-5 .ball-holder {
+  animation: loadingE 1.3s linear infinite;
+}
+
+@keyframes loadingE {
+  0 {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
