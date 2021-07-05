@@ -418,6 +418,8 @@ function addAlert(text) {
 //fetching data from dynamo DB 
 var allFetchedFeatures;
 function fetchdata() {
+  // show loader
+  $('#loader').addClass('show');
   fetch(
     apigateway 
   )
@@ -429,6 +431,8 @@ function fetchdata() {
         new ol.format.GeoJSON().readFeatures(allPoints)
       );
       allFetchedFeatures = master_points_source.getFeatures();
+      // hide
+      $('#loader').removeClass('show');
     });
 }
 
@@ -579,7 +583,7 @@ map.on("click", function (evt) {
       document.getElementById("feature_street").innerHTML =
         feat.getProperties().Street;
       document.getElementById("feature_Zip").innerHTML =
-        feat.getProperties().Zipcode;
+        feat.getProperties().Zip;
       document.getElementById("feature_City").innerHTML =
         feat.getProperties().City;
       document.getElementById("feature_pay_attention").innerHTML =
